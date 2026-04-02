@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>아빠의 휘두릅 마두릅 🌿 직거래 판매</title>
+<title>아빠의 땅두릅 🌿 직거래 판매</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Gothic:wght@400;700;800&display=swap');
 
@@ -883,6 +883,81 @@
     90% { opacity: 0.4; }
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
+
+  /* === 모바일 반응형 개선 === */
+  @media (max-width: 600px) {
+
+    /* 아빠 소개 줄바꿈 개선 */
+    .dad-intro p {
+      font-size: 18px;
+      word-break: keep-all;
+      overflow-wrap: break-word;
+      line-height: 1.9;
+    }
+
+    /* 먹는법 카드 4장 → 1열로 */
+    div[style*="grid-template-columns: repeat(2,1fr)"],
+    div[style*="grid-template-columns:repeat(2,1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* 두릅 자랑 카드도 1열 */
+    .durup-flex {
+      flex-direction: column;
+    }
+
+    /* 갤러리 wide 빼고 1열 */
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-item.wide {
+      grid-column: 1;
+    }
+
+    /* 가격 카드 세로 배치 */
+    .price-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .price-card {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    /* 단골 배지 텍스트 크기 */
+    .regular-badge {
+      font-size: 17px;
+      padding: 10px 18px;
+    }
+
+    /* 농협 배너 세로 배치 */
+    .nonghyup-bar {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* BP 섹션 */
+    .bp-big {
+      font-size: 36px;
+    }
+
+    /* 주문 단계 글씨 */
+    .order-steps li {
+      font-size: 18px;
+    }
+
+    /* 전화번호 */
+    .phone-big {
+      font-size: 28px;
+    }
+
+    /* 먹는법 카드 1열 */
+    .howto-grid-mobile {
+      grid-template-columns: 1fr !important;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1080,7 +1155,7 @@
   <div style="background:#fff9e6; border:2px solid #e8832a; border-radius:10px; padding:12px 16px; font-size:17px; font-weight:700; color:#7a4000; text-align:center; margin-bottom:16px;">
     ⚡ 반드시 데쳐서 드세요! 끓는 물에 줄기부터 먼저 넣고 살짝 데치면 끝. 향은 더 살아나고 맛은 부드러워져요 🌿
   </div>
-  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px;">
+  <div class="howto-grid-mobile" style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px;">
     <div style="background:#f9fdf5; border-radius:12px; padding:16px; text-align:center; border:2px solid #d0ecd0;">
       <span style="font-size:36px; display:block; margin-bottom:8px;">🥢</span>
       <strong style="font-size:19px; color:#2d6a2d; display:block; margin-bottom:8px; font-weight:800;">데쳐서 초장에</strong>
@@ -1193,7 +1268,7 @@
   <p>봄이 지나면 이 땅두릅은 없어집니다.</p>
   <p>아버지가 매일 아침 직접 따는 땅두릅,<br>한 번만 드셔보세요.</p>
   <p style="font-size:19px; opacity:0.85; margin-top: 16px;">
-    "맛있으면 내년에 또 사세요.<br>다음 작물 나올때 또 만나요! (고추가루, 고추, 들깨, 들기름, 블루베리 중 뭐 하나 잘되면) 😄"<br>
+    "맛있으면 내년에 또 사세요.<br>그 때도 아마 여기 있을 거예요 😄"<br>
     — 귀농 3년차 아버지
   </p>
   <span class="footer-emoji" style="font-size:40px;">👨‍🌾</span>
